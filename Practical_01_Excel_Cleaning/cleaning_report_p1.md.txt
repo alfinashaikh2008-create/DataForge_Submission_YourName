@@ -1,0 +1,22 @@
+# Practical 1 Report
+
+## 1. Problem Statement
+The objective of this practical was to clean the raw Superstore dataset downloaded from Kaggle. The dataset required preprocessing before it could be used for analysis. The tasks included removing duplicate records, handling missing values, and formatting the data correctly.
+
+## 2. Concept Elaborated
+Data cleaning is an important step in data analysis because poor-quality data can produce incorrect results. Removing duplicate records prevents repeated information from affecting calculations. Missing value imputation replaces empty cells with suitable values such as "Unknown" for text columns or the column average for numeric columns. Proper data types, such as dates and currency, ensure accurate analysis and reporting.
+
+## 3. Execution Steps
+- Imported the CSV dataset into Microsoft Excel.
+- Saved the file as `dataset_cleaned.xlsx`.
+- Removed duplicate rows using **Data → Remove Duplicates**.
+- Checked for blank cells using **Go To Special → Blanks**.
+- Filled missing values with **Unknown** or the column average.
+- Formatted date columns as **Date**.
+- Formatted Sales and Profit columns as **Currency**.
+- Saved the cleaned workbook.
+
+## 4. Key Insights
+- Duplicate records were identified and removed where necessary.
+- Missing values were handled to improve data quality.
+- The dataset is now clean and ready for further analysis and visualization.

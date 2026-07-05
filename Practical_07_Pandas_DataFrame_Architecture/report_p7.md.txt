@@ -1,0 +1,20 @@
+# Practical 7: Pandas DataFrame Architecture
+
+## Aim
+To load and inspect a dataset using the Pandas library.
+
+## Procedure
+1. Imported the pandas library.
+2. Loaded the dataset into a DataFrame.
+3. Displayed the first five rows using `df.head()`.
+4. Displayed dataset information using `df.info()`.
+5. Generated descriptive statistics using `df.describe()`.
+6. Checked missing values using `df.isnull().sum()`.
+7. Displayed the dataset shape.
+8. Calculated the dataset memory usage.
+
+## Concept
+Pandas DataFrame is a vectorized data structure that enables efficient storage, manipulation, and analysis of large datasets.
+
+## Conclusion
+The dataset was successfully loaded and inspected. The structure, summary statistics, missing values, shape, and memory usage were analyzed successfully.

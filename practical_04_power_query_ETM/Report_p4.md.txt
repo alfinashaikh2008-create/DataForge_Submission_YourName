@@ -1,0 +1,67 @@
+# Practical 4: Power Query ETL Engine
+
+## Aim
+
+To automate data transformation in Power BI using Power Query so that future CSV files are cleaned automatically.
+
+---
+
+## Software Used
+
+- Microsoft Power BI Desktop
+- CSV Dataset
+
+---
+
+## Procedure
+
+1. Open Power BI Desktop.
+2. Click **Get Data → Text/CSV**.
+3. Select the raw CSV file.
+4. Click **Transform Data** to open Power Query Editor.
+5. Promote the first row as headers.
+6. Assign correct data types to columns.
+7. Replace errors in numerical columns with 0.
+8. Split the **Order ID** column using "-" as the delimiter.
+9. Create a Conditional Column:
+   - If Profit > 0 → "Profitable"
+   - Else → "Loss"
+10. Click **Close & Apply** to load transformed data into Power BI.
+
+---
+
+## Power Query Transformations
+
+- Imported CSV file.
+- Promoted headers.
+- Changed column data types.
+- Replaced error values.
+- Split Order ID into two columns.
+- Created Profitability column.
+
+---
+
+## Concept
+
+Power Query is Microsoft's ETL (Extract, Transform, Load) engine.
+
+- **Extract:** Import data from CSV.
+- **Transform:** Clean, split, replace errors, create new columns.
+- **Load:** Load processed data into Power BI for reporting.
+
+Whenever the CSV is updated, clicking **Refresh** automatically repeats all transformation steps without manual work.
+
+---
+
+## Expected Output
+
+- Cleaned dataset loaded into Power BI.
+- New **Profitability** column.
+- Split Order ID into Prefix and Number.
+- Automated ETL pipeline.
+
+---
+
+## Result
+
+The ETL pipeline was successfully created using Power Query. Data cleaning and transformation are automated, ensuring that new CSV files can be refreshed instantly with consistent preprocessing.

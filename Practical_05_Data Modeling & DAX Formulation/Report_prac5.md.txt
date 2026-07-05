@@ -1,0 +1,24 @@
+# Practical 5: Data Modeling & DAX Formulation
+
+## Objective
+To create DAX measures and calculated columns for business analytics in Power BI.
+
+## Tools Used
+- Power BI Desktop
+
+## Procedure
+1. Verified the single-table data model.
+2. Created the **Total Sales** measure using the SUM() function.
+3. Created the **Profit Margin %** measure using the DIVIDE() function.
+4. Created the **Shipping Delay** calculated column using the DATEDIFF() function.
+
+## DAX Formulas
+- Total Sales = SUM('dataset_raw (1)'[Sales])
+- Profit Margin % = DIVIDE(SUM('dataset_raw (1)'[Profit]), SUM('dataset_raw (1)'[Sales]), 0)
+- Shipping Delay = DATEDIFF('dataset_raw (1)'[Order Date], 'dataset_raw (1)'[Ship Date], DAY)
+
+## Concept
+DAX (Data Analysis Expressions) is used to create custom measures and calculated columns for advanced analytics and reporting.
+
+## Result
+Successfully created DAX measures and a calculated column to support business analysis in Power BI.

@@ -1,0 +1,49 @@
+let
+    // Load CSV File
+    Source = Csv.Document(
+        File.Contents("C:\Users\YourName\Documents\Orders.csv"),
+        [Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]
+    ),
+
+    // Promote First Row as Headers
+    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+
+    // Set Data Types
+    #"Changed Type" = Table.TransformColumnTypes(
+        #"Promoted Headers",
+        {
+            {"Order ID", type text},
+            {"Product", type text},
+            {"Sales", type number},
+            {"Profit", type number},
+            {"Quantity", Int64.Type},
+            {"Region", type text}
+        }
+    ),
+
+    // Replace Errors
+    #"Replaced Errors" = Table.ReplaceErrorValues(
+        #"Changed Type",
+        {
+            {"Sales", 0},
+            {"Profit", 0}
+        }
+    ),
+
+    // Split Order ID Column
+    #"Split Column by Delimiter" = Table.SplitColumn(
+        #"Replaced Errors",
+        "Order ID",
+        Splitter.SplitTextByDelimiter("-", QuoteStyle.Csv),
+        {"Order Prefix", "Order Number"}
+    ),
+
+    // Add Conditional Column
+    #"Added Conditional Column" = Table.AddColumn(
+        #"Split Column by Delimiter",
+        "Profitability",
+        each if [Profit] > 0 then "Profitable" else "Loss"
+    )
+
+in
+    #"Added Conditional Column"

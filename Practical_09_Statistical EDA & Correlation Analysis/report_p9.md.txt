@@ -1,0 +1,23 @@
+# Practical 9: Statistical EDA & Correlation Analysis
+
+## Aim
+To identify statistical relationships between numerical variables using correlation analysis.
+
+## Procedure
+1. Loaded the dataset into a Pandas DataFrame.
+2. Filtered only numerical columns.
+3. Generated the correlation matrix using `df.corr()`.
+4. Identified the pair of variables with the highest positive correlation.
+5. Calculated the skewness of the Sales column using `scipy.stats.skew`.
+6. Exported the correlation matrix to a CSV file.
+
+## Concept
+Correlation measures the strength and direction of relationships between variables. Skewness indicates whether the distribution of a variable is symmetric or biased toward one side.
+
+## Output Files
+- 09_statistics.ipynb
+- correlation_matrix.csv
+- report_p9.md
+
+## Conclusion
+The correlation matrix was successfully generated, the strongest positive relationship between variables was identified, and the skewness of the Sales variable was analyzed.

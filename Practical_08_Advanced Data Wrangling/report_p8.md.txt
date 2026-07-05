@@ -1,0 +1,11 @@
+# Practical 8: Advanced Data Wrangling
+
+## Aim
+To clean and reshape data programmatically using Pandas.
+
+## Procedure
+1. Loaded the dataset.
+2. Checked for missing values.
+3. Dropped columns with more than 50% missing values.
+4. Filled missing numerical values using the median.
+5.

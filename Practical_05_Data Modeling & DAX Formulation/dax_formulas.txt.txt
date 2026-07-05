@@ -1,0 +1,15 @@
+Total Sales = SUM('dataset_raw (1)'[Sales])
+
+Profit Margin % =
+DIVIDE(
+    SUM('dataset_raw (1)'[Profit]),
+    SUM('dataset_raw (1)'[Sales]),
+    0
+)
+
+Shipping Delay =
+DATEDIFF(
+    'dataset_raw (1)'[Order Date],
+    'dataset_raw (1)'[Ship Date],
+    DAY
+)
